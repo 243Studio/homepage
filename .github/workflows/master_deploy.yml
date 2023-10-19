@@ -1,4 +1,4 @@
-name: WEPO Homepage update
+name: 243 Studio Homepage deployment
 on:
   push:
     branches:
