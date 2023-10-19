@@ -3,14 +3,12 @@ import { Navbar, Footer} from './components/Content';
 import {useState, useEffect} from "react"
 //import logo from './logo.svg';
 import './App.css';
-import Publication from './Page/Publication';
-
+import Contact from './Page/Contact';
 import Home from './Page/Home'
-import Projects from './Page/Projects/Projects'
-import Culture from './Page/Culture'
+import { useLocation } from 'react-router-dom';
+
 import NotFound from './Page/Notfound'
-import FrontEndResume from './Page/Resume/FrontEndResume'
-import MarketingResume from './Page/Resume/MarketingResume'
+
 
 import Studio243 from './Page/Studio243'
 import {BlogDetail, BlogList, EditorElement} from './Page'
@@ -26,6 +24,8 @@ function App() {
 
   const [showButton, setShowButton] = useState(false);
   const [fixNav, setFixNav] = useState('fixed')
+  const [currentUrl, setCurrentUrl] = useState(window.location.href)
+  const location = useLocation();
 
   function checkScroll(){
        if (window.pageYOffset > 300) {
@@ -35,6 +35,7 @@ function App() {
       }
     
   }
+
   useEffect(() => {
     window.addEventListener("scroll", checkScroll )
     
@@ -42,6 +43,8 @@ function App() {
   }, []);
 
 
+  useEffect(() => {
+  }, [location]);
   
   const scrollToTop = () => {
     window.scrollTo({
@@ -58,20 +61,16 @@ function App() {
 
   return (
     <div className="App light">
-      <Navbar/>
+      <Navbar link={location}/>
       <div className="content">
 
       <Routes >
         <Route path='' element={<Home/>}/>
-        <Route path="projects" element={<Projects/>}/>
-        <Route path="publication" element={<Publication/>}/>
-        <Route path="culture" element={<Culture/>}/>
-        <Route path="resume/1" element={<FrontEndResume/>}/>
-        <Route path="resume/2" element={<MarketingResume/>}/>
+
         <Route path="studio" element={<Studio243/>}/>
         <Route path="blog/" element = {<BlogList/>} />
         <Route path="blog/:id" element = {<BlogDetail/>} />
-        <Route path="labo" element = {<EditorElement/>} />
+        <Route path="contact" element = {<Contact/>} />
         <Route path="/*" element={<NotFound/>}/>
 
       </Routes>

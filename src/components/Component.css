@@ -1,12 +1,13 @@
 /*NAV BAR=============================================*/
-
+@import "/src/App.css";
 nav{
     position: absolute;
-    background-color: white;
+    background-color: var(--blue);
     width:100%;
     height: fit-content;
     padding:0.5rem 0rem;
     top:0%;
+    color: var(--white);
     z-index: 1;
     margin-bottom:10px;
   }
@@ -82,10 +83,9 @@ nav{
   /*Footer ========*/
 
 .footer{
-    position: relative;
-    bottom: 60%;
+    position: fixed;
+    bottom: 0%;
     width:100%;
-    padding: 2rem 0rem 2rem 0rem;
     transition: 01s ease-in-out;
   }
   
@@ -109,7 +109,8 @@ nav{
   }
   .footer p{
     margin: 1rem 0rem 0.5rem 0rem;
-    font-size: 8px;
+    font-size: 12px;
     transition: 01s ease-in-out;
+    color: var(--blue)
   
   }

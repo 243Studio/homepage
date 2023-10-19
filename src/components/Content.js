@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
+import { createBrowserHistory } from "history";
 import { Label } from '@mui/icons-material';
 /*This is the nav element of the app*/
 import './Component.css'
@@ -15,72 +16,25 @@ function NavElement(props){
 
 
 /*This is the main nav bar of the app*/
-function Navbar(){
+function Navbar(props){
     const [darkMode, setDarkMode] = useState(false)
     const [position, setPosition] = useState('start')
-    /*const toggle = (e) =>{
-        let currentMode = "light"
-        let nextMode ="dark"
-        let x = document.querySelectorAll("." +currentMode)
-        let q = document.querySelector('.switch-container')
 
-        if(darkMode){
-            
-            setDarkMode(false)
-            setPosition("end")
-            
-        } 
-        else{
-            setDarkMode(true)
-            currentMode ="dark"
-            nextMode = "light"
-            x = document.querySelectorAll("." +currentMode)
-            setPosition("start")
-            
-        } 
-        
-        for(let i of x){
-            i.classList.remove(currentMode)
-            i.classList.add(nextMode)
-        }
-        //e.target.style.justifyContent = position
-        q.style.justifyContent = position
-        console.log(x)
-
-        
-    }*/
+      
     return (
         <nav className="nav">
-            {/*<div className='switch-cont'>
-                <p style={{color:"#051A36"}}>Light</p>
-                <div onClick={toggle} className="switch-container">
-                    <div  className='switch light'></div>
-                </div>
-                <p style={{color:"#051A36"}}>Dark</p>
-    </div> */}
+           
             <ul>
-                <NavElement 
+                {props.link.pathname === "/contact/" ? <NavElement 
                     name= "HOME"
                     link = ""
-                />
-                {/*<NavElement 
-                    name= "CULTURE"
-                    link = "culture"
-    />
+                />:
                 
                 <NavElement 
-                    name= "PROJECTS"
-                    link = "projects"
-                />
-                */}
-                <NavElement 
-                    name= "RESUME"
-                    link = "resume/1"
-                />
-                <NavElement
-                name="PROJECTS"
-                link = "Projects"
-                />
+                    name= "CONTACTEZ-NOUS"
+                    link = "contact/"
+                />}
+            
                 
             </ul>
            { /*<p id="myname">magloire mukendi</p> */}
@@ -96,35 +50,30 @@ function Navbar(){
 function Footer(){
     return(
         <footer className ="footer light">
-            <hr/>
             <div>
-                <a href="https://www.instagram.com/mag.legrand/" target="_blank">
+                <a href="https://www.instagram.com/243.studio/" target="_blank">
                 <span className='light'>                       
                         <i className="fa fa-instagram"></i>
                     </span>
                 </a>
-                <a href="https://www.linkedin.com/in/magmukendi/" target="_blank">
+                <a href="https://www.linkedin.com/company/243studio" target="_blank">
                     <span className='light'>                        
                         <i className="fa fa-linkedin"></i>
                     </span>
                 </a>
-                <a href="https://github.com/LeGrandMAG" target="_blank">
+                <a href="https://github.com/243Studio" target="_blank">
                 <span className='light'>                       
                         <i className="fa fa-github"></i>
                     </span>
                 </a>
-                <a href="https://twitter.com/MAGMukendi" target="_blank">
-                <span className='light'>                        
-                        <i className="fa fa-twitter"></i>
-                    </span>
-                </a>
-                <a href="https://www.facebook.com/mag.mukendi" target="_blank">
+                
+                <a href="https://www.facebook.com/243Studio" target="_blank">
                 <span className='light'>                       
                         <i className="fa fa-facebook"></i>
                     </span>
                 </a>
             </div>
-                <p className='light'>© Mag Mukendi 2022</p>
+                <p id="copyright" className='light'>© 243 Studio 2023</p>
         </footer>
     )
     
