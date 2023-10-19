@@ -1,1 +1,0 @@
-documentation for file structure: https://blog.webdevsimplified.com/2022-07/react-folder-structure/
