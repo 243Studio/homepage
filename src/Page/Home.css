@@ -30,9 +30,10 @@
     color:var(--white);
     border-radius: 10px;
     letter-spacing: 5px;
-
+    transition: 0.3s ease-in-out;
 }
 
 #portfolio-button:hover{
-    background:rgba(255,0,0,1);
+    background:var(--blue);
+    transition: 0.3s ease-in-out;
 }

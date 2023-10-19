@@ -189,13 +189,12 @@ p{
 }
 .content{
   width:100%;
-  margin-top: 40px;
   transition: 01s ease-in-out;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height:100vh;
+  justify-self: center;
 }
 .back-to-top {
   position: fixed;

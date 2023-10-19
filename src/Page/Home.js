@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="home-container light">
         <img alt="243 logo" id="logo" src={logo}></img>
-        <h3 id="tagline">Decouvrez notre portefolio</h3>
+        <h3 id="tagline">Découvrez notre portefolio</h3>
         <a target="_blank" href='https://app.243studio.me' id="portfolio-button">Portfolio</a>
         </div>
   )

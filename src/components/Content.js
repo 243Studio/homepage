@@ -31,7 +31,7 @@ function Navbar(props){
                 />:
                 
                 <NavElement 
-                    name= "CONTACTEZ-NOUS"
+                    name= "CONTACT"
                     link = "contact/"
                 />}
             

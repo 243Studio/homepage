@@ -1,10 +1,10 @@
 {
-  "name": "LeGrandMAG.github.io",
+  "name": "243studio.me",
   "version": "0.1.0",
-  "homepage": "https://LeGrandMAG.github.io",
+  "homepage": "https://243studio.me",
   "private": true,
   "license": "MIT",
-  "author": "Mag Mukendi <magmukendi0@gmail.com> (https://magmukendi.me/)",
+  "author": "243 Studio <243Studio@gmail.com> (https://243studio.me/)",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",

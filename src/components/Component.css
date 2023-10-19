@@ -1,5 +1,5 @@
 /*NAV BAR=============================================*/
-@import "/src/App.css";
+@import "../App.css";
 nav{
     position: absolute;
     background-color: var(--blue);
@@ -74,10 +74,11 @@ nav{
   
   .navElement .anchor:hover{
     opacity: 1;
-    color: white;
-    background-color: var(--dark);
+    color: var(--blue);
+    width:100%;
+    background-color: var(--white);
     transition: 0.2s;
-  
+    padding:0.5rem 0.8rem;
   }
 
   /*Footer ========*/
@@ -99,12 +100,12 @@ nav{
   .footer span{
     font-size: 14px;
     padding: 10px;
-    transition: 01s ease-in-out;
+    transition: 0.2s ease-in-out;
   
   }
 
   .footer span:hover{
-    color: #1781C2;
+    color: var(--red);
     opacity: 1;
   }
   .footer p{
