@@ -51,7 +51,7 @@ function Footer(){
     return(
         <footer className ="footer light">
             <div>
-                <a href="https://www.instagram.com/243.studio/" target="_blank">
+                <a href="https://www.instagram.com/243stdio/" target="_blank">
                 <span className='light'>                       
                         <i className="fa fa-instagram"></i>
                     </span>
@@ -73,7 +73,7 @@ function Footer(){
                     </span>
                 </a>
             </div>
-                <p id="copyright" className='light'>© 243 Studio 2023</p>
+                <p id="copyright" className='light'>© 243 Studio 2024</p>
         </footer>
     )
     
