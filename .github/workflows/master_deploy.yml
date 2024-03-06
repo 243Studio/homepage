@@ -2,7 +2,7 @@ name: 243 Studio Homepage deployment
 on:
   push:
     branches:
-      - dev
+      - rel
 jobs:
   build:
     runs-on: ubuntu-latest
