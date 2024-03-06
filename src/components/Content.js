@@ -73,7 +73,7 @@ function Footer(){
                     </span>
                 </a>
             </div>
-                <p id="copyright" className='light'>© 243 Studio 2024</p>
+                <p id="copyright" className='light'>© 243 Studio 2024 | affiliated to <a style={{color:'black'}}>wepo</a></p>
         </footer>
     )
     
